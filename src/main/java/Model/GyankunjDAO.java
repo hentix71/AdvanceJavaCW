@@ -33,6 +33,8 @@ public class GyankunjDAO
         return password;
     }
 
+
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -57,28 +59,28 @@ public class GyankunjDAO
     };
 
     //testing 1: Inserting new value in Database
-    public static void main (String [] Args)
-    {
-        try
-                (
-                        String insertQuerry = "Insert into Book (BookId, Title, Author, Genre, Descripton, Availability) values(?,?,?,?,?,?);";
-                        Connection con = getConnection();
-                        PreparedStatement insert = con.prepareStatement(insertQuerry);
-                )
-        {
-            insert.setInt(1,7);
-            insert.setString(2, "A for ayush");
-            insert.setString(3, "Ayush Rai");
-            insert.setString(4, "Horror");
-            insert.setString(5, "Horror Book by Ayush Rai");
-            insert.setBoolean(6, true);
-
-            insert.executeUpdate();
-        }
-        catch (SQLException e)
-        {
-            throw new RuntimeException("Error in prepared statement block", e);
-        }
+//    public static void main (String [] Args)
+//    {
+//        try
+//                (//sajflksad;lfkas;dlf;lsadfkasdfk
+//                        String insertQuerry = "Insert into Book (BookId, Title, Author, Genre, Descripton, Availability) values(?,?,?,?,?,?);";
+//                        Connection con = getConnection();
+//                        PreparedStatement insert = con.prepareStatement(insertQuerry);
+//                )
+//        {
+//            insert.setInt(1,7);
+//            insert.setString(2, "A for ayush");
+//            insert.setString(3, "Ayush Rai");
+//            insert.setString(4, "Horror");
+//            insert.setString(5, "Horror Book by Ayush Rai");
+//            insert.setBoolean(6, true);
+//
+//            insert.executeUpdate();
+//        }
+//        catch (SQLException e)
+//        {
+//            throw new RuntimeException("Error in prepared statement block", e);
+//        }
 
     }
 }
